@@ -18,6 +18,7 @@ function drawBarGraph(pTime){
 	{
 		$('.ant').each(function(){
 			var prop = 1000 / $(this).width();
+			prop = prop < 1 ? 1 : prop;
 			var nSize = $(this).attr('data-percent') / prop;
 			$(this).find('.skillbar-bar').animate({
 				width: nSize
@@ -30,6 +31,7 @@ function drawBarGraph(pTime){
 		{
 			$('.pos').each(function(){
 				var prop = 1000 / $(this).width();
+				prop = prop < 1 ? 1 : prop;
 				var nSize = $(this).attr('data-percent') / prop;
 				$(this).find('.skillbar-bar').animate({
 					width: nSize
@@ -40,6 +42,7 @@ function drawBarGraph(pTime){
 		{
 			$('.skillbar').each(function(){
 				var prop = 1000 / $(this).width();
+				prop = prop < 1 ? 1 : prop;
 				var nSize = $(this).attr('data-percent') / prop;
 				$(this).find('.skillbar-bar').animate({
 					width: nSize
